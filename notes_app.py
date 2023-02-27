@@ -5,7 +5,7 @@ import Notice
 def run():
     n = Notice.Notice()
     while True:
-        com = input("Ввведите команду(DELETE, UPDATE, ALL, INSERT, READ, EXIT)")
+        com = input("Ввведите команду(DELETE, UPDATE, INSERT, READ, EXIT)")
         if com == 'DELETE':
             id = input("Если вы хотите удалить заметку, напишите его ID:")
             n.delete_notice(int(id))
@@ -15,7 +15,7 @@ def run():
             title = input("Если хотите заменить заголовок, напишите его:")
             body = input("Если хотите заменить текст заметки, напишите его:")
             n.update_line(id, title, body)
-        elif com == 'ALL':
+        elif com == 'READ':
             n.read_all()
         elif com == 'INSERT':
             title = input("Напишите заголовок:")

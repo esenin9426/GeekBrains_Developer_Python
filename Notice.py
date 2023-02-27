@@ -14,6 +14,8 @@ class Notice:
             f1 = open(self.file_name, "x")
         except IndexError:
             pass
+        except ValueError:
+            pass
         finally:
             f1.close()
 
